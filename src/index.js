@@ -1,17 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 import Header from "./Header";
-import Home from "./Home";
 import About from "./About";
 import Services from "./Services";
 import Facility from "./Facility";
-// import Gallery from "./Gallery";
 import VisitArea from "./VisitArea";
 import Client from "./Client";
 import Contact from "./Contact";
 import Footer from "./Footer";
 import "./index.css";
-// Import slick-carousel styles
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -22,17 +20,26 @@ import BackToTop from "./BackToTop";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Header />
-    <SlickSlider />
-    <About />
-    <Services />
-    <Facility />
-    <ImageSlider />
-    <VisitArea />
-    <Client />
-    <Contact />
-    <Footer />
-    <BackToTop/>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<SlickSlider />} />
+        <Route path="/about-us" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/gallery" element={<ImageSlider />} />
+        <Route path="/testimonial" element={<Client />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+      {/* <SlickSlider />
+      <About />
+      <Services />
+      <Facility />
+      <ImageSlider />
+      <VisitArea />
+      <Client />
+      <Contact /> */}
+      <Footer />
+      <BackToTop />
+    </BrowserRouter>
   </React.StrictMode>
 );
-

@@ -1,0 +1,96 @@
+/* Mobile Menu Button Styling */
+.slicknav_btn {
+  background-color: #222;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  cursor: pointer;
+}
+
+.slicknav_menutxt {
+  margin-right: 10px;
+}
+
+.slicknav_icon-bar {
+  background-color: white;
+  height: 2px;
+  width: 18px;
+  display: block;
+  margin: 4px 0;
+}
+
+.close-icon {
+  font-size: 24px;
+  color: white;
+}
+
+/* Slide Down Animation */
+.slicknav_nav {
+  display: none;
+  background-color: #222;
+  padding: 10px 0;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.slicknav_visible {
+  display: block;
+  animation: slideDown 0.3s ease forwards;
+}
+
+.slicknav_hidden {
+  display: none;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Mobile Menu Links */
+.slicknav_nav li {
+  padding: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.slicknav_nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Social Links and Quote Button */
+.mobile-social-links a {
+  color: white;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.mobile-social-links .btn {
+  background-color: #f02930;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+/* Desktop Style */
+@media (min-width: 992px) {
+  .header-right1 {
+    display: flex;
+  }
+  .mobile_menu {
+    display: none;
+  }
+}

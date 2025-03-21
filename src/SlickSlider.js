@@ -3,6 +3,13 @@ import Slider from "react-slick";
 import "animate.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import About from "./About";
+import Services from "./Services";
+import Facility from "./Facility";
+import ImageSlider from "./ImageSlider";
+import VisitArea from "./VisitArea";
+import Client from "./Client";
+import Contact from "./Contact";
 
 const SlickSlider = () => {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -81,6 +88,13 @@ const SlickSlider = () => {
           </div>
         ))}
       </Slider>
+      <About />
+      <Services />
+      <Facility />
+      <ImageSlider />
+      <VisitArea />
+      <Client />
+      <Contact />
     </div>
   );
 };
