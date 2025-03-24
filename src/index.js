@@ -30,14 +30,6 @@ root.render(
         <Route path="/testimonial" element={<Client />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-      {/* <SlickSlider />
-      <About />
-      <Services />
-      <Facility />
-      <ImageSlider />
-      <VisitArea />
-      <Client />
-      <Contact /> */}
       <Footer />
       <BackToTop />
     </BrowserRouter>

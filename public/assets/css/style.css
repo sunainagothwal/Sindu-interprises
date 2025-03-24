@@ -607,6 +607,7 @@ hr {
 @media (max-width: 575px) {
   .header-btn2 {
     padding: 24px 15px !important;
+    /* display: none; */
   }
 }
 
@@ -1247,6 +1248,7 @@ hr {
   .slider-area .hero-caption-left h1 {
     font-size: 35px;
     line-height: 1.2;
+    padding-top: 11%;
   }
 }
 

@@ -25,49 +25,54 @@
   margin: 4px 0;
 }
 
-.close-icon {
-  font-size: 24px;
-  color: white;
-}
-
-/* Slide Down Animation */
-.slicknav_nav {
-  display: none;
+/* Mobile Menu Panel with Slide Down Effect */
+.slicknav_panel {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  height: 100vh;
   background-color: #222;
-  padding: 10px 0;
-  width: 100%;
-  transition: all 0.3s ease;
-}
-
-.slicknav_visible {
-  display: block;
-  animation: slideDown 0.3s ease forwards;
-}
-
-.slicknav_hidden {
-  display: none;
-}
-
-@keyframes slideDown {
-  from {
-    transform: translateY(-20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-/* Mobile Menu Links */
-.slicknav_nav li {
-  padding: 15px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.slicknav_nav a {
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: right 0.4s ease-in-out;
+  z-index: 999;
+}
+
+/* Slide-in Effect */
+.slicknav_panel.open {
+  right: 0;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Menu Links */
+.slicknav_panel ul {
+  list-style: none;
+  padding: 0;
+}
+
+.slicknav_panel li {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.slicknav_panel a {
   text-decoration: none;
+  color: white;
+  font-size: 18px;
 }
 
 /* Social Links and Quote Button */
@@ -85,12 +90,40 @@
   display: inline-block;
 }
 
-/* Desktop Style */
+/* No Border */
+.slicknav_panel li:not(.mobile-social-links) {
+  border: none;
+}
+
+/* Desktop Styles */
 @media (min-width: 992px) {
   .header-right1 {
     display: flex;
   }
+
   .mobile_menu {
     display: none;
   }
+}
+
+@media (max-width: 991px) {
+  .header-social {
+    display: none;
+  }
+
+  /* .btn {
+    display: none;
+  } */
+}
+
+.header-area {
+  position: static !important;
+  /* Ensure non-fixed */
+  box-shadow: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-header {
+  position: static !important;
+  /* Prevent any fixed header */
 }
